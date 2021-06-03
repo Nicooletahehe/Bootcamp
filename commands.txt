@@ -1,0 +1,34 @@
+#configure git initialization
+git init
+
+#configure your basic info
+git config --global user.name "Nicoleta Ungureanu"
+git config --global user.email nicoleta7u@yahoo.com
+git config --global core.editor "code --wait"
+git config --global core.autocrlf --true
+
+#see the file with the configuration done so far
+git config --global -e
+
+#adding to staging and committing
+git add . =>all the files will be added; if you want only one file, just specify the name.extension
+git commit -m "message" => to commit the changes added to the staging area
+
+#after creating your repository
+…or create a new repository on the command line
+echo "# Bootcamp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Nicooletahehe/Bootcamp.git
+git push -u origin master
+
+#view the logs
+git log
+git log --oneline
+git log --oneline --patch
+git show logid
+
+#Finding the author of lines 
+git blame -e -L 3,8 index.html => verify who wrote the code from line 3 to line 8
