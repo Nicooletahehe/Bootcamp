@@ -32,3 +32,9 @@ git show logid
 
 #Finding the author of lines 
 git blame -e -L 3,8 index.html => verify who wrote the code from line 3 to line 8
+
+#tagging => tag specific points in a repository’s history as being important
+git tag v1.0 =>version of the product
+git show v1.0
+git tag -d v1.0 => deleting the tag
+git tag -n =>shows the changes of the commits tagged with this version
