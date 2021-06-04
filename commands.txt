@@ -38,3 +38,10 @@ git tag v1.0 =>version of the product
 git show v1.0
 git tag -d v1.0 => deleting the tag
 git tag -n =>shows the changes of the commits tagged with this version
+
+#git branching
+git branch feature/login => creating a new branch
+git switch -C feature/login =>creating and switching to the new branch
+
+
+git push -u origin feature/login
