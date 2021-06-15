@@ -63,7 +63,7 @@ export class index extends Component {
             if(!item.isDone) {
                 item.isDone = true;
             } else {
-                item.isDone = false;
+                item.isDone = false;git 
             }
             newList.push(item);
         });
