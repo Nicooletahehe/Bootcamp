@@ -1,10 +1,13 @@
 // npm install -g yarn
-// yarn init
+// yarn init => package.json file will be created
 // yarn add -D webpack
 // yarn add react
 // yarn build
 
-//steps after installing yarn => webpack.config.js //IMPORT THE FILE IN THE ES5
+import { render } from "react-dom";
+
+//steps after installing yarn => webpack.config.js => bundle, minify, uglify
+//IMPORT THE FILE IN THE ES5
 // 1. move both main.js && index.js outside of src folder.
 // 2. delete src folder.
 // 3. create webpack.config.js
@@ -151,4 +154,39 @@
 // },
 // terminal command: yarn add -D css-loader style-loader
 
+// to remember that this file reads from right-to-left !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 // for every file, we need to add a rule in webpack for it to know how to translate it: svg etc.
+
+// in order to change the env, you can set up the webpack env
+// https://www.npmjs.com/package/dotenv-webpack
+// the mode in webpack.config.js
+//   mode: "development", => can be changed to production
+// once setted up to production, the main.js file in the dist folder, will have another structure
+// it will be minified and uglified, because it already bundled all the js files
+
+// LifeCycle -> https://reactjs.org/docs/react-component.html
+
+// Mounting
+// ->constructor(): fetch data, //loaded only once when the dom is rendered
+// ->getDerivedStateFromProps(): derived the new state value from the new state value => it is called whenever my prop value or state value changed
+// ->render(): only once (html)
+// ->componentDidMount(): calls only once
+    // to register events for
+    // fetch data
+    // to manipulate the DOM
+
+// Update
+// ->static getDerivedStateFromProps()
+// ->shouldComponentUpdate()
+// ->render()
+// ->getSnapshotBeforeUpdate(): take a snapshot of anything (position in scrolling)
+// ->componentDidUpdate(): 
+
+// UnMount
+// ->componentWillUnmount(): my component removed from the DOM, timers, stopping the fetch of the data
+
+// Error sectiong
+// ->getDerivedStateFromError(): 
+// ->componentDidCatch(): if you want to catch all the errors of the server
+
