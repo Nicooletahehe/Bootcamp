@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+// import App from "./App";
+import Todo from './ToDo';
 
 ReactDOM.render(
-  <>
-    <App firstName="yagnesh" lastName="modh" />
-    <App firstName="rohit" lastName="sharma" />
-    <App firstName="virat" lastName="kohli" />
-  </>,
+  // <App firstName="Nicoleta" lastName="Ungureanu" />,
+  <Todo />,
   document.getElementById("root")
 );
